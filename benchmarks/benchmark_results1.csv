@@ -1,0 +1,7 @@
+Run,Benchmark type,User time,System time,Wall clock time,CPU usage,Major page faults,Minor page faults,Swaps
+1,C++ Modules Check,24371.40,900.04,26:36.71,1582%,838,164436899,0
+1,Default,24269.94,894.71,26:28.90,1583%,747,164466662,0
+2,C++ Modules Check,24513.64,905.82,26:47.61,1581%,787,164400577,0
+2,Default,24491.57,901.08,26:43.54,1583%,708,164430133,0
+3,C++ Modules Check,24486.11,907.35,26:44.23,1582%,716,164395484,0
+3,Default,24479.80,905.03,26:42.89,1583%,717,164426130,0
