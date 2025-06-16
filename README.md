@@ -12,6 +12,8 @@ This benchmark evaluates the performance impact of enabling constant checks for 
 | Default           | 2.0 | 24413.77  | 900.273333  | 1598.443333     | 15.83     | 724.0             | 1.64440975e8      | 0.0   |
 | Difference        | 0.0 | -43.28    | -4.13       | -4.406667       | 0.013333  | -56.333333        | 29988.333333      | 0.0   |  
 
+### How to reproduce
+
 - Run `./setup-benchmark.sh` to disable address space randomization and set the CPU scaling governor to performance (Linux only).
 
 - Use `./run-benchmark.sh` to clone my fork of the LLVM project, compile both Clang versions (with and without C++20 module checking), and execute the benchmark N times.
