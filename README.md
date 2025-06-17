@@ -4,20 +4,17 @@
 
 This benchmark evaluates the performance impact of checking for C++20 module usage on a small C++ example file, both with and without a GPLv3 license preamble.  
 
-#### Test Files:  
-
+Test Files:  
 - `perf-code-samples/example1_with_GPLv3.cpp` (~675 lines of license preamble)  
 - `perf-code-samples/example1_without_GPLv3.cpp`  
 
-#### Results:
-
-The module usage check accounted for only ~0.5% of total compilation time, even on a file which already is fast to compile.  
+➡ The module usage check accounted for only ~0.5% of total compilation time, even on a file which already is fast to compile.  
 Adding ~675 lines of license preamble increased this overhead by only ~0.1%.
 
-**WITHOUT GPLv3**
+**Without GPLv3** (`perf-code-samples/example1_without_GPLv3.cpp`)
 ![without_gplv3_top_down_v4](https://github.com/user-attachments/assets/5e73916a-9d6f-4087-a56e-cd1e514d5fbc)
 
-**WITH GPLv3**
+**With GPLv3** (`perf-code-samples/example1_with_GPLv3.cpp`
 ![with_gplv3_top_down_v5](https://github.com/user-attachments/assets/2b0d7cd9-1ca9-414d-af59-83af5575dfac)
 
 ## Benchmark: Building Clang While Always Checking For C++20 Module Usage
