@@ -34,34 +34,48 @@ To reproduce this benchmark:
 - Use `main.py` to calculate the averages for both groups and the difference between them.
   The results are output as a markdown table, like the ones below.
 
-The benchmark was performed multiple times and does generally not seem to have a noticable impact on build-times.
-In some cases, the Clang build with checks for C++ module use even performed slightly better. This could potentially be 
-attributed to statistical noise overshadowing the performance overhead.
+Surprisingly, the Clang build with checks for C++ module usage often performed slightly better than the default Clang build.
+To confirm, the benchmark was repeated multiple times.
+The 4 benchmark runs make for a total of 31 compilations with each Clang version and the results remained consistent.
+The raw benchmark data for all runs can be found in `benchmarks/`.
 
-##### Benchmark 1 with 3 runs for each Clang:
-| Benchmark type    | User time | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
-|-------------------|-----------|-------------|-----------------|-----------|-------------------|-------------------|-------|
-| C++ Modules Check | 24457.05  | 904.403333  | 1602.85         | 15.816667 | 780.333333        | 1.6441e8          | 0.0   |
-| Default           | 24413.77  | 900.273333  | 1598.443333     | 15.83     | 724.0             | 1.64440975e8      | 0.0   |
-| Difference        | -43.28    | -4.13       | -4.406667       | 0.013333  | -56.333333        | 29988.333333      | 0.0   |  
+The summary's for each benchmark run:
 
-➡️ **Elapsed real time**: ↑0.25%, **User time**: ↑0.18%, **System time**: ↑0.46% 
+- Benchmark 1 with 3 runs for each Clang:
+  
+  | Benchmark type    | User time | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
+  |-------------------|-----------|-------------|-----------------|-----------|-------------------|-------------------|-------|
+  | C++ Modules Check | 24457.05  | 904.403333  | 1602.85         | 15.816667 | 780.333333        | 1.6441e8          | 0.0   |
+  | Default           | 24413.77  | 900.273333  | 1598.443333     | 15.83     | 724.0             | 1.64440975e8      | 0.0   |
+  | Difference        | -43.28    | -4.13       | -4.406667       | 0.013333  | -56.333333        | 29988.333333      | 0.0   |  
 
-##### Benchmark 2 with 10 runs for each Clang:
-| Benchmark type    | User time |  System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps  |
-|-------------------|-----------|--------------|-----------------|-----------|-------------------|-------------------|--------|
-| C++ Modules Check | 17158.833 | 642.367      | 1125.817        | 15.806    | 777.3             | 1.64306193e8      | 0.0    |
-| Default           | 17303.975 | 647.976      | 1136.841        | 15.787    | 809.6             | 1.6430e8          | 0.0    |
-| Difference        | 145.142   | 5.609        | 11.024          | -0.019    | 32.3              | -7197.3           | 0.0    |
+  ➡ **Elapsed real time**: ↑0.27%, **User time**: ↑0.18%, **System time**: ↑0.46%
+  
+- Benchmark 2 with 10 runs for each Clang:
 
-➡️ **Elapsed real time**: ↓0.96%, **User time**: ↓0.83%, **System time**: ↓0.86% 
+  | Benchmark type    | User time |  System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps  |
+  |-------------------|-----------|--------------|-----------------|-----------|-------------------|-------------------|--------|
+  | C++ Modules Check | 17158.833 | 642.367      | 1125.817        | 15.806    | 777.3             | 1.64306193e8      | 0.0    |
+  | Default           | 17303.975 | 647.976      | 1136.841        | 15.787    | 809.6             | 1.6430e8          | 0.0    |
+  | Difference        | 145.142   | 5.609        | 11.024          | -0.019    | 32.3              | -7197.3           | 0.0    |
 
-##### Benchmark 3 with 12 runs for each Clang:
-| Benchmark type    | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
-|-------------------|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
-| C++ Modules Check | 16864.321667 | 633.996667  | 1106.9075       | 15.803333 | 737.916667        | 1.6437e8          | 0.0   |
-| Default           | 16974.99     | 637.189167  | 1113.116667     | 15.819167 | 721.75            | 1.6443e8          | 0.0   |
-| Difference        | 110.668333   | 3.1925      | 6.209167        | 0.015833  | -16.166667        | 61695.166667      | 0.0   |
+  ➡ **Elapsed real time**: ↓0.98%, **User time**: ↓0.85%, **System time**: ↓0.87%
 
-➡️ **Elapsed real time**: ↓0.56%, **User time**: ↓0.65%, **System time**: ↓0.5% 
+- Benchmark 3 with 12 runs for each Clang:
+  | Benchmark type    | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
+  |-------------------|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
+  | C++ Modules Check | 16864.321667 | 633.996667  | 1106.9075       | 15.803333 | 737.916667        | 1.6437e8          | 0.0   |
+  | Default           | 16974.99     | 637.189167  | 1113.116667     | 15.819167 | 721.75            | 1.6443e8          | 0.0   |
+  | Difference        | 110.668333   | 3.1925      | 6.209167        | 0.015833  | -16.166667        | 61695.166667      | 0.0   |
 
+  ➡ **Elapsed real time**: ↓0.56%, **User time**: ↓0.66%, **System time**: ↓0.50%
+  
+- Benchmark 4 with 6 runs for each Clang:
+  
+  | Benchmark type    | Run | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
+  |-------------------|-----|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
+  | Default           | 3.5 | 54067.638333 | 2003.093333 | 3527.821667     | 15.888333 | 726.666667        | 1.6440e8          | 0.0   |
+  | C++ Modules Check | 3.5 | 54012.113333 | 1965.365    | 3523.328333     | 15.885    | 726.833333        | 1.6443e8          | 0.0   |
+  | Difference        | 0.0 | -55.525      | -37.728333  | -4.493333       | -0.003333 | 0.166667          | 30209.333333      | 0.0   |
+
+  ➡ **Elapsed real time**: ↓0.13%, **User time**: ↓0.10%, **System time**: ↓1.92%
