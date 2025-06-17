@@ -35,8 +35,8 @@ To reproduce this benchmark:
   The results are output as a markdown table, like the one above.
 
 The benchmark was performed multiple times and does generally not seem to have a noticable impact on build-times.
-In some cases, the Clang build with checks for C++ module use even performed slightly better. This could probably be attributed 
-to some statistical noise overshadowing any potential performance overhead.
+In some cases, the Clang build with checks for C++ module use even performed slightly better. This could potentially be 
+attributed to statistical noise overshadowing the performance overhead.
 
 ##### Benchmark 1 with 3 runs for each Clang:
 | Benchmark type    | User time | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
