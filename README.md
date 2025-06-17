@@ -32,7 +32,7 @@ To reproduce this benchmark:
   The results are output as `csv`. You can configure `./run-benchmark.sh` for the output location and number of runs.
 
 - Use `main.py` to calculate the averages for both groups and the difference between them.
-  The results are output as a markdown table, like the one above.
+  The results are output as a markdown table, like the ones below.
 
 The benchmark was performed multiple times and does generally not seem to have a noticable impact on build-times.
 In some cases, the Clang build with checks for C++ module use even performed slightly better. This could potentially be 
