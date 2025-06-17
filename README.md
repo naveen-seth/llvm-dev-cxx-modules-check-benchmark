@@ -35,9 +35,10 @@ To reproduce this benchmark:
   The results are output as a markdown table, like the one above.
 
 The benchmark was performed multiple times and does generally not seem to have a noticable impact on build-times.
-In some cases, the Clang build with checks for C++ module use even performed slightly better. This could probably be attributed to statistical noise or other.
+In some cases, the Clang build with checks for C++ module use even performed slightly better. This could probably be attributed 
+to some statistical noise overshadowing any potential performance overhead.
 
-Benchmark 1 with 3 runs for each Clang:
+##### Benchmark 1 with 3 runs for each Clang:
 | Benchmark type    | User time | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
 |-------------------|-----------|-------------|-----------------|-----------|-------------------|-------------------|-------|
 | C++ Modules Check | 24457.05  | 904.403333  | 1602.85         | 15.816667 | 780.333333        | 1.6441e8          | 0.0   |
@@ -46,18 +47,21 @@ Benchmark 1 with 3 runs for each Clang:
 
 ➡️ **Elapsed real time**: ↑0.25%, **User time**: ↑0.18%, **System time**: ↑0.46% 
 
-Benchmark 2 with 10 runs for each Clang:
+##### Benchmark 2 with 10 runs for each Clang:
 | Benchmark type    | User time |  System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps  |
 |-------------------|-----------|--------------|-----------------|-----------|-------------------|-------------------|--------|
 | C++ Modules Check | 17158.833 | 642.367      | 1125.817        | 15.806    | 777.3             | 1.64306193e8      | 0.0    |
 | Default           | 17303.975 | 647.976      | 1136.841        | 15.787    | 809.6             | 1.6430e8          | 0.0    |
 | Difference        | 145.142   | 5.609        | 11.024          | -0.019    | 32.3              | -7197.3           | 0.0    |
 
-➡️ **Elapsed real time**: ↑TODO%, **User time**: ↓0.83%, **System time**: ↓0.86% 
+➡️ **Elapsed real time**: ↓0.96%, **User time**: ↓0.83%, **System time**: ↓0.86% 
 
-Benchmark 3 with 12 runs for each Clang:
+##### Benchmark 3 with 12 runs for each Clang:
 | Benchmark type    | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
 |-------------------|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
 | C++ Modules Check | 16864.321667 | 633.996667  | 1106.9075       | 15.803333 | 737.916667        | 1.6437e8          | 0.0   |
 | Default           | 16974.99     | 637.189167  | 1113.116667     | 15.819167 | 721.75            | 1.6443e8          | 0.0   |
 | Difference        | 110.668333   | 3.1925      | 6.209167        | 0.015833  | -16.166667        | 61695.166667      | 0.0   |
+
+➡️ **Elapsed real time**: ↓0.56%, **User time**: ↓0.65%, **System time**: ↓0.5% 
+
