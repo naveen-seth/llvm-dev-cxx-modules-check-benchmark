@@ -53,6 +53,8 @@ Benchmark 2 with 10 runs for each Clang:
 | Default           | 17303.975 | 647.976      | 1136.841        | 15.787    | 809.6             | 1.6430e8          | 0.0    |
 | Difference        | 145.142   | 5.609        | 11.024          | -0.019    | 32.3              | -7197.3           | 0.0    |
 
+➡️ **Elapsed real time**: ↑TODO%, **User time**: ↓0.83%, **System time**: ↓0.86% 
+
 Benchmark 3 with 12 runs for each Clang:
 | Benchmark type    | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
 |-------------------|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
