@@ -39,7 +39,7 @@ In some cases, the Clang build with checks for C++ module use even performed sli
 
 Benchmark 1 with 3 runs for each Clang:
 | Benchmark type    | User time | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
-|-------------------|-----|-----------|-------------|-----------------|-----------|-------------------|-------------------|-------|
+|-------------------|-----------|-------------|-----------------|-----------|-------------------|-------------------|-------|
 | C++ Modules Check | 24457.05  | 904.403333  | 1602.85         | 15.816667 | 780.333333        | 1.6441e8          | 0.0   |
 | Default           | 24413.77  | 900.273333  | 1598.443333     | 15.83     | 724.0             | 1.64440975e8      | 0.0   |
 | Difference        | -43.28    | -4.13       | -4.406667       | 0.013333  | -56.333333        | 29988.333333      | 0.0   |  
