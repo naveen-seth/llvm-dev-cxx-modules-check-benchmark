@@ -33,7 +33,7 @@ To reproduce this benchmark:
 
 Surprisingly, the Clang build with checks for C++ module usage often performed slightly better than the default Clang build.
 To confirm, the benchmark was repeated multiple times.  
-The 4 benchmark runs make for a total of 31 compilations with each Clang version and the results remained consistent.  
+The 4 benchmark runs make for a total of 31 compilations with each Clang version and the result remained for most compilations.  
 The raw benchmark data for all runs can be found in `benchmarks/`.
 
 The summary's for each benchmark run:
