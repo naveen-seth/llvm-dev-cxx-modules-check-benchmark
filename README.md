@@ -69,10 +69,10 @@ The summary's for each benchmark run:
   
 - Benchmark 4 with 6 runs for each Clang:
   
-  | Benchmark type    | Run | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
-  |-------------------|-----|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
-  | Default           | 3.5 | 54067.638333 | 2003.093333 | 3527.821667     | 15.888333 | 726.666667        | 1.6440e8          | 0.0   |
-  | C++ Modules Check | 3.5 | 54012.113333 | 1965.365    | 3523.328333     | 15.885    | 726.833333        | 1.6443e8          | 0.0   |
-  | Difference        | 0.0 | -55.525      | -37.728333  | -4.493333       | -0.003333 | 0.166667          | 30209.333333      | 0.0   |
+  | Benchmark type    | User time    | System time | Wall clock time | CPU usage | Major page faults | Minor page faults | Swaps |
+  |-------------------|--------------|-------------|-----------------|-----------|-------------------|-------------------|-------|
+  | Default           | 54067.638333 | 2003.093333 | 3527.821667     | 15.888333 | 726.666667        | 1.6440e8          | 0.0   |
+  | C++ Modules Check | 54012.113333 | 1965.365    | 3523.328333     | 15.885    | 726.833333        | 1.6443e8          | 0.0   |
+  | Difference        | -55.525      | -37.728333  | -4.493333       | -0.003333 | 0.166667          | 30209.333333      | 0.0   |
 
   ➡ **Elapsed real time**: ↓0.13%, **User time**: ↓0.10%, **System time**: ↓1.92%
